@@ -29,7 +29,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.9</version>
     </dependency>
 
     <dependency>
@@ -37,10 +37,10 @@
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId> org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId> org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-test</artifactId>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId> org.springframework.boot</groupId>
@@ -78,6 +78,31 @@
       <artifactId>hive-jdbc</artifactId>
       <version>1.2.2</version>
     </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.15</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-client</artifactId>
+      <version>0.96.1-hadoop2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-server -->
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-server</artifactId>
+      <version>0.96.1-hadoop2</version>
+    </dependency>
+
+
+
+
+
+
   </dependencies>
 
   <build>

@@ -1,3 +1,5 @@
+package com.iotek.hive;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,8 +9,8 @@ import java.sql.*;
 public class HiveUtil {
     private static String driverName = "org.apache.hive.jdbc.HiveDriver";
     private static String url = "jdbc:hive2://192.168.47.128:10000/gj";   //mydb用户自己的数据库
-    private static String userName="hadoop";//登录服务器的用户名和密码
-    private static String pwd = "hadoop";
+    private static String userName="root";
+    private static String pwd = "root";
 
     private static Connection connection = null;
     private static Statement statement = null;
@@ -16,7 +18,7 @@ public class HiveUtil {
 
     @Before
     public void initDB(){
-      //  System.setProperty("hadoop.home.dir","F:\\software\\hadoop-2.6.4");
+        System.setProperty("hadoop.home.dir","F:\\software\\hadoop-2.6.4");
         try {
             Class.forName(driverName);
             connection = DriverManager.getConnection(url, userName, pwd);
@@ -45,7 +47,7 @@ public class HiveUtil {
 
     @Test
     public void indatabases() throws SQLException {
-        String sql = "use haitong_hive";
+        String sql = "use haitong_hive1";
         statement.execute(sql);
     }
 
@@ -69,7 +71,7 @@ public class HiveUtil {
     @Test
     public void loadData() throws SQLException {
         indatabases();
-        String sql = "load data local inpath '/home/hadoop/orders' overwrite into table orders123";
+        String sql = "load data local inpath '/home/hadoop/orders.txt' overwrite into table orders123";
         statement.execute(sql);
     }
 
